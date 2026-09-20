@@ -14,6 +14,8 @@ My first initial thought process was to use the fact that dictionaries cannot co
 and so I used this fact to then compare the lengths of the dictionary to the list. If the list has greater length
 than the dictionary, that must mean there was a duplicate, returning true. False otherwise.
 
+Time Complexity: O(n), but always takes the worst case scenario of time since it doesn't end early.
+
     REFLECTION:
 Upon reflection, it had been much better to simply use a set. They are essentially dictionaries without key: value pairs
 and only the keys. However, sets are a concept I had recently learned, but now thinking about it in a way where sets are
@@ -31,4 +33,7 @@ def containsDuplicateNeet(self, nums: list[int]) -> bool:
         else:
             hashSet.add(i)
     return False
+#Time complexity is also O(n) but can end early if duplicate is found
+
+
 
